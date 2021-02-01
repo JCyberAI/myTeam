@@ -30,12 +30,12 @@ function createObjects () {
                 message: "",
             },
             {
-                name: "",
+                name: "Intern",
                 type: "",
                 message: "",
             },
             {
-                name: "",
+                name: "Manager",
                 type: "",
                 message: "",
             } 
