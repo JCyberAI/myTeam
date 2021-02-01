@@ -21,23 +21,31 @@ function createObjects () {
         .prompt([
             {
                 name: "Employee",
-                type: "",
-                message: "",
+                type: "input",
+                message: "What is your ID?",
+                message: "What is your Email?",
+                message: "What is your Github?",
             },
             {
                 name: "Engineer",
-                type: "",
-                message: "",
+                type: "input",
+                message: "What is your ID?",
+                message: "What is your Email?",
+                message: "What is your Github?",
             },
             {
                 name: "Intern",
-                type: "",
-                message: "",
+                type: "input",
+                message: "What is your ID?",
+                message: "What is your Email?",
+                message: "What school do you attend?",
             },
             {
                 name: "Manager",
-                type: "",
-                message: "",
+                type: "input",
+                message: "What is your ID?",
+                message: "What is your Email?",
+                message: "What is your Office Number?",
             } 
         ]).then((data) => {
 
