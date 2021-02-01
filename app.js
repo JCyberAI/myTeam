@@ -39,7 +39,12 @@ function createObjects () {
                 type: "",
                 message: "",
             } 
-    }])
+        ]).then((data) => {
+
+            console.log("Team Member: " +  data.name);
+
+        });
+        
 
 }
 
