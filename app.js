@@ -68,6 +68,8 @@ createObjects(["Employee", "Engineer", "Intern", "Manager"]);
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
 
+createObjects.outputPath(OUTPUT_DIR)
+
 // HINT: each employee type (manager, engineer, or intern) has slightly different
 // information; write your code to ask different questions via inquirer depending on
 // employee type.
