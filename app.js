@@ -22,34 +22,97 @@ function createObjects () {
             {
                 name: "Employee",
                 type: "input",
-                message: "What is your ID?",
-                message: "What is your Email?",
-                message: "What is your Github?",
+                message: "What is your Name?",
             },
+
+            {
+                name: "Employee",
+                type: "input",
+                message: "What is your ID?",
+            },   
+
+            {
+                name: "Employee",
+                type: "input",
+                message: "What is your Email?",
+            },
+
+            {
+                name: "Engineer",
+                type: "input",
+                message: "What is your Name?",
+            },
+
             {
                 name: "Engineer",
                 type: "input",
                 message: "What is your ID?",
+            },
+
+            {
+                name: "Engineer",
+                type: "input",
                 message: "What is your Email?",
+            },
+
+            {
+                name: "Engineer",
+                type: "input",
                 message: "What is your Github?",
             },
+
+            {
+                name: "Intern",
+                type: "input",
+                message: "What is your Name?",
+            },
+
             {
                 name: "Intern",
                 type: "input",
                 message: "What is your ID?",
+            },   
+
+            {
+                name: "Intern",
+                type: "input",
                 message: "What is your Email?",
-                message: "What school do you attend?",
             },
+
+            {
+                name: "Intern",
+                type: "input",
+                message: "What School did you graduate from?",
+            },
+
+            {
+                name: "Manager",
+                type: "input",
+                message: "What is your Name?",
+            },   
+
             {
                 name: "Manager",
                 type: "input",
                 message: "What is your ID?",
-                message: "What is your Email?",
-                message: "What is your Office Number?",
-            } 
-        ]).then((data) => {
+            },
 
-            console.log("Team Member: " +  data.name);
+            {
+                name: "Manager",
+                type: "input",
+                message: "What is your Email?",
+            },
+
+            {
+                name: "Manager",
+                type: "input",
+                message: "What is your Office number?",
+            },
+
+        ]).then((answers) => {
+
+            console.log(answers);
+            console.log(answers.Cats)
 
         });
         
@@ -60,7 +123,7 @@ function createObjects () {
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
 
-createObjects(["Employee", "Engineer", "Intern", "Manager"]);
+createObjects();
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
@@ -68,7 +131,7 @@ createObjects(["Employee", "Engineer", "Intern", "Manager"]);
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
 
-createObjects.outputPath(OUTPUT_DIR)
+// createObjects.outputPath(OUTPUT_DIR)
 
 // HINT: each employee type (manager, engineer, or intern) has slightly different
 // information; write your code to ask different questions via inquirer depending on
