@@ -112,7 +112,10 @@ function createObjects () {
         ]).then((answers) => {
 
             console.log(answers);
-            console.log(answers.Cats)
+            console.log(answers.Employee);
+            console.log(answers.Engineer);
+            console.log(answers.Intern);
+            console.log(answers.Manager);
 
         });
         
