@@ -15,99 +15,33 @@ const render = require("./lib/htmlRenderer");
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
-function createObjects () {
+function createManager () {
     
     inquirer
         .prompt([
             {
-                name: "Employee",
+                name: "ManagerName",
                 type: "input",
-                message: "What is your Name?",
+                message: "What is the Managers name?",
             },
 
             {
-                name: "Employee",
+                name: "ManagerEmail",
                 type: "input",
-                message: "What is your ID?",
-            },   
-
-            {
-                name: "Employee",
-                type: "input",
-                message: "What is your Email?",
+                message: "What is your Managers Email?",
             },
-
             {
-                name: "Engineer",
+                name: "ManagerId",
                 type: "input",
-                message: "What is your Name?",
+                message: "What is your Managers Id?",
             },
-
             {
-                name: "Engineer",
+                name: "ManagerOfficenumber",
                 type: "input",
-                message: "What is your ID?",
+                message: "What is your Managers Office number?",
             },
+            
 
-            {
-                name: "Engineer",
-                type: "input",
-                message: "What is your Email?",
-            },
-
-            {
-                name: "Engineer",
-                type: "input",
-                message: "What is your Github?",
-            },
-
-            {
-                name: "Intern",
-                type: "input",
-                message: "What is your Name?",
-            },
-
-            {
-                name: "Intern",
-                type: "input",
-                message: "What is your ID?",
-            },   
-
-            {
-                name: "Intern",
-                type: "input",
-                message: "What is your Email?",
-            },
-
-            {
-                name: "Intern",
-                type: "input",
-                message: "What School did you graduate from?",
-            },
-
-            {
-                name: "Manager",
-                type: "input",
-                message: "What is your Name?",
-            },   
-
-            {
-                name: "Manager",
-                type: "input",
-                message: "What is your ID?",
-            },
-
-            {
-                name: "Manager",
-                type: "input",
-                message: "What is your Email?",
-            },
-
-            {
-                name: "Manager",
-                type: "input",
-                message: "What is your Office number?",
-            },
 
         ]).then((answers) => {
 
