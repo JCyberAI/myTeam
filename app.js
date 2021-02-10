@@ -201,7 +201,10 @@ function callFunction() {
             break;
           case "Manager":
               createManager();
-              break;  
+            break;
+          case "Employee":
+              createEmployee();  
+            break;  
           default:
             buildCompany();
         }
