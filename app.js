@@ -10,7 +10,8 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
-
+const team = [];
+const id = [];
 
 
 // Write code to use inquirer to gather information about the development team members,
@@ -36,7 +37,7 @@ function createManager () {
                 type: "input",
                 message: "What is your Managers Id?",
             },
-            
+
             {
                 name: "ManagerOfficenumber",
                 type: "input",
@@ -45,14 +46,97 @@ function createManager () {
             
 
 
-        ]).then((answers) => {
+        ]).then(answers => {
 
-            console.log(answers);
-            console.log(answers.Employee);
-            console.log(answers.Engineer);
-            console.log(answers.Intern);
-            console.log(answers.Manager);
+          const manager = new Manager (answers.ManagerName, answers.ManagerEmail, answers.ManagerId, answers.ManagerOfficenumber)
+            team.push(manager)
+            id.push(answers.ManagerId)
 
+            callFunction();
+        });
+        
+
+}
+
+function createEngineer () {
+    
+    inquirer
+        .prompt([
+            {
+                name: "EngineerName",
+                type: "input",
+                message: "What is the Engineers name?",
+            },
+
+            {
+                name: "EngineerEmail",
+                type: "input",
+                message: "What is your Engineers Email?",
+            },
+
+            {
+                name: "EngineerId",
+                type: "input",
+                message: "What is your Engineers Id?",
+            },
+
+            {
+                name: "EngineerGithub",
+                type: "input",
+                message: "What is your Engineer's Github?",
+            },
+            
+
+
+        ]).then(answers => {
+
+          const engineer = new Engineer (answers.EngineerName, answers.EngineerEmail, answers.EngineerId, answers.EngineerGithub)
+            team.push(engineer)
+            id.push(answers.EngineerId)
+
+            callFunction();
+        });
+        
+
+}
+
+function createIntern () {
+    
+    inquirer
+        .prompt([
+            {
+                name: "InternName",
+                type: "input",
+                message: "What is the Interns name?",
+            },
+
+            {
+                name: "InternEmail",
+                type: "input",
+                message: "What is your Interns Email?",
+            },
+
+            {
+                name: "InternId",
+                type: "input",
+                message: "What is your Interns Id?",
+            },
+
+            {
+                name: "InternSchool",
+                type: "input",
+                message: "What is your Interns school?",
+            },
+            
+
+
+        ]).then(answers => {
+
+          const intern = new Intern (answers.InternName, answers.InternEmail, answers.InternId, answers.InternSchool)
+            team.push(intern)
+            id.push(answers.InternId)
+
+            callFunction();
         });
         
 
