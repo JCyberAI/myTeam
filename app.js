@@ -142,11 +142,54 @@ function createIntern () {
 
 }
 
+function callFunction() {
+
+    inquirer.prompt([
+        {
+          type: "list",
+          name: "memberChoice",
+          message: "Which type of team member would you like to add?",
+          choices: [
+            "Engineer",
+            "Intern",
+            "Manager",
+            "I don't want to add any more team members"
+          ]
+        }
+      ]).then(userChoice => {
+        switch (userChoice.memberChoice) {
+          case "Engineer":
+            createEngineer();
+            break;
+          case "Intern":
+            createIntern();
+            break;
+          case "Manager":
+              createManager();
+              break;  
+          default:
+            buildCompany();
+        }
+
+})
+}
+
+function buildCompany() {
+
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR)
+      }
+      fs.writeFileSync(outputPath, render(team), "utf-8");
+    }
+
+}
+
+callFunction();
+
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
 
-createObjects();
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
@@ -154,7 +197,7 @@ createObjects();
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
 
-createObjects.outputPath(OUTPUT_DIR)
+// createObjects.outputPath(OUTPUT_DIR)
 
 // HINT: each employee type (manager, engineer, or intern) has slightly different
 // information; write your code to ask different questions via inquirer depending on
