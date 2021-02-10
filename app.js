@@ -182,7 +182,6 @@ function buildCompany() {
       fs.writeFileSync(outputPath, render(team), "utf-8");
     }
 
-}
 
 callFunction();
 
