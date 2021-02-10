@@ -30,11 +30,13 @@ function createManager () {
                 type: "input",
                 message: "What is your Managers Email?",
             },
+
             {
                 name: "ManagerId",
                 type: "input",
                 message: "What is your Managers Id?",
             },
+            
             {
                 name: "ManagerOfficenumber",
                 type: "input",
