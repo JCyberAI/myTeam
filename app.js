@@ -142,6 +142,41 @@ function createIntern () {
 
 }
 
+function createEmployee () {
+    
+    inquirer
+        .prompt([
+            {
+                name: "EmployeeName",
+                type: "input",
+                message: "What is the Employees name?",
+            },
+
+            {
+                name: "EmployeeEmail",
+                type: "input",
+                message: "What is your Employees Email?",
+            },
+
+            {
+                name: "EmployeeId",
+                type: "input",
+                message: "What is your Employees Id?",
+            },
+            
+
+        ]).then(answers => {
+
+          const employee = new Employee (answers.EmployeeName, answers.EmployeeEmail, answers.EmployeeId,)
+            team.push(employee)
+            id.push(answers.EmployeeId)
+
+            callFunction();
+        });
+        
+
+}
+
 function callFunction() {
 
     inquirer.prompt([
