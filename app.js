@@ -188,6 +188,7 @@ function callFunction() {
             "Engineer",
             "Intern",
             "Manager",
+            "Employee",
             "I don't want to add any more team members"
           ]
         }
